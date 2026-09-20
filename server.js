@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3000;
 const EMAIL_TO = process.env.EMAIL_TO || "rreddykumar310@gmail.com";
 
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(__dirname));
 
 function createTransporter() {
   if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASS) {
