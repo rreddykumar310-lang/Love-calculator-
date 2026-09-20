@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Love Calculator By Name</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <div class="method">Calculation Method : Zodiac Sign (राशि)</div>
+
+      <div class="couple-icon" aria-hidden="true">
+        <span class="person person-left">
+          <i class="head"></i><i class="body"></i>
+        </span>
+        <span class="person person-right">
+          <i class="head"></i><i class="body"></i>
+        </span>
+      </div>
+
+      <h1>Love Calculator By Name</h1>
+
+      <form id="loveForm">
+        <label for="yourName">Enter Your Name</label>
+        <input id="yourName" name="yourName" type="text" autocomplete="name" required />
+
+        <select id="yourGender" name="yourGender" required>
+          <option value="" selected disabled>Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <div class="divider">—</div>
+
+        <label for="crushName">Enter Your Crush's Name</label>
+        <input id="crushName" name="crushName" type="text" required />
+
+        <select id="crushGender" name="crushGender" required>
+          <option value="" selected disabled>Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <button type="submit">Calculate</button>
+        <p class="terms">By Clicking Calculate you are agree to our T&amp;C</p>
+      </form>
+
+      <div id="result" class="result hidden" aria-live="polite">
+        <div class="result-title">Your Love Compatibility</div>
+        <div id="score" class="score">--%</div>
+        <p id="resultText"></p>
+        <button id="again" type="button" class="again">Calculate Again</button>
+      </div>
+
+      <div id="status" class="status" role="status"></div>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
